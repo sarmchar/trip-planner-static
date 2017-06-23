@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-const db = require('./db');
+const {db, Place, Hotel, Restaurant, Activity} = require('./models');
 const volleyball = require('volleyball');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
-
 app.use(volleyball);
 
 app.use(bodyParser.json());
@@ -15,11 +14,30 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 nunjucks.configure('views', { noCache: true });
 
-app.get('/', function(req, res, next) {
-  res.render('index');
-});
+app.use('/bootstrap', express.static('node_modules/bootstrap/dist'));
+app.use('/jquery', express.static('node_modules/jquery/dist'));
 
-// add routes here
+app.get('/', function(req, res, next) {
+  var outerScopeContainer = {};
+  console.log('DB HOTELS ASDFASF', db);
+  Hotel.findAll()
+  .then(function (dbHotels) {
+    outerScopeContainer.dbHotels = dbHotels;
+    return Restaurant.findAll();
+  })
+  .then(function (dbRestaurants) {
+    outerScopeContainer.dbRestaurants = dbRestaurants;
+    return Activity.findAll();
+  })
+  .then(function (dbActivities) {
+    res.render('index', {
+      hotels: outerScopeContainer.dbHotels,
+      restaurants: outerScopeContainer.dbRestaurants,
+      activities: dbActivities
+    });
+  })
+  .catch(next);
+});
 
 app.use(function(req, res, next) {
   const err = new Error('That page doesn\'t exist!');

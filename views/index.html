@@ -2,9 +2,27 @@
 <html>
 <head>
   <title>Trip Planner</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 <body>
   <h1>Welcome!</h1>
+  <h2>Hotels: </h2>
+  <select>
+  {% for i in hotels %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Restaurants: </h2>
+  <select>
+  {% for i in restaurants %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Activities: </h2>
+  <select>
+  {% for i in activities %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
 </body>
 </html>
