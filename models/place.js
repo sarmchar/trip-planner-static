@@ -4,23 +4,23 @@ const Sequelize = require('sequelize');
 var Place = db.define('places', {
   address: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   city: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   state: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   phone: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   location:{
     type: Sequelize.ARRAY(Sequelize.FLOAT),
-    allowNull: false
+    //allowNull: false
   }
 });
 

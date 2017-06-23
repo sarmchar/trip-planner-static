@@ -4,11 +4,11 @@ const Sequelize = require('sequelize');
 var Restaurant = db.define('restaurants', {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   cuisine: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   price: {
     type: Sequelize.INTEGER(1,5) //?????

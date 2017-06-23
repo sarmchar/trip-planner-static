@@ -4,15 +4,15 @@ const Sequelize = require('sequelize');
 var Hotel = db.define('hotels', {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   },
   num_stars: {
     type: Sequelize.FLOAT(1,5),
-    allowNull: false
+    //allowNull: false
   },
   ammenities: {
     type: Sequelize.STRING,
-    allowNull: false
+    //allowNull: false
   }
 });
 
