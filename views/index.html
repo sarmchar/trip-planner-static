@@ -1,12 +1,16 @@
+{% extends 'layout.html' %}
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trip Planner</title>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-</head>
-<body>
-  <h1>Welcome!</h1>
-  <h2>Hotels: </h2>
+  {% block title %}Your Trip{% endblock %}
+</head><!--
+ -->{% block content %}<!--
+
+ --><body>
+      <div class="section">
+        <div class="row">
+          <div class="col-lg-4" id='opts'>
+            <h2>Hotels: </h2>
   <select>
   {% for i in hotels %}
   <option value="{{i.name}}">{{i.name}}</option>
@@ -24,5 +28,74 @@
   <option value="{{i.name}}">{{i.name}}</option>
   {% endfor %}
 </select>
+          </div>
+
+        </div><!-- /.row -->
+      <div class="row">
+          <div class="col-lg-4" id='days'>
+            <h1>Day 2</h1>
+          </div>
+
+        </div><!-- /.row -->
+
+   <div class="row">
+      <div class="col-lg-4 " id ='allDays'>
+        <h1>orange day list ???</h1>
+      </div>
+
+    </div><!-- /.row -->
+
+    <div class="row">
+      <div class="col-lg-4 " id='currentPlan'>
+        <h2>Hotels: </h2>
+  <select>
+  {% for i in hotels %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Restaurants: </h2>
+  <select>
+  {% for i in restaurants %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Activities: </h2>
+  <select>
+  {% for i in activities %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+      </div>
+
+      </div><!-- /.row -->
+
+
+    </div><!-- /.section -->
+
 </body>
+{% endblock %}
+
 </html>
+
+
+
+
+
+<!--   <h2>Hotels: </h2>
+  <select>
+  {% for i in hotels %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Restaurants: </h2>
+  <select>
+  {% for i in restaurants %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select>
+  <h2>Activities: </h2>
+  <select>
+  {% for i in activities %}
+  <option value="{{i.name}}">{{i.name}}</option>
+  {% endfor %}
+</select> -->

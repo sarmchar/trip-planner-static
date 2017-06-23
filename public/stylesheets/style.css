@@ -1,17 +1,28 @@
-h1 {
-  color: purple; }
+.row {
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+  max-height: 100%;
+  text-align: center; }
 
-h4 {
-  color: blue; }
+.col-lg-4 {
+  float: right;
+  font-family: fantasy;
+  color: white;
+  max-height: 100%; }
 
-h5 {
-  color: pink; }
+#opts {
+  background-color: #8cd4ff; }
 
-h2 {
-  color: purple; }
+#days {
+  background-color: #003a65; }
 
-h1 {
-  color: blue; }
+#allDays {
+  background-color: #8A2BE2; }
 
-h2 {
-  color: yellow; }
+#currentPlan {
+  background-color: #009085; }
+
+.navbar {
+  background-color: black;
+  color: white; }

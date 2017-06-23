@@ -19,7 +19,7 @@ app.use('/jquery', express.static('node_modules/jquery/dist'));
 
 app.get('/', function(req, res, next) {
   var outerScopeContainer = {};
-  console.log('DB HOTELS ASDFASF', db);
+  //console.log('DB HOTELS ASDFASF', db);
   Hotel.findAll()
   .then(function (dbHotels) {
     outerScopeContainer.dbHotels = dbHotels;
