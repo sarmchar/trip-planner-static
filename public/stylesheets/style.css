@@ -5,7 +5,7 @@
   max-height: 100%;
   text-align: center; }
 
-.col-lg-4 {
+.col-lg-12 {
   float: right;
   font-family: fantasy;
   color: white;
@@ -22,6 +22,9 @@
 
 #currentPlan {
   background-color: #009085; }
+
+#map-canvas {
+  height: 100vh; }
 
 .navbar {
   background-color: black;

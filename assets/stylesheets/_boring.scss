@@ -12,7 +12,7 @@
 
 }
 
-.col-lg-4 {
+.col-lg-12 {
   float: right;
   font-family: fantasy;
   color: white;
@@ -34,4 +34,8 @@
 
 #currentPlan {
   background-color:#009085;
+}
+
+#map-canvas{
+  height: 100vh;
 }
