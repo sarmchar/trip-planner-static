@@ -1,31 +1,47 @@
+h2 {
+  color: white;
+  text-align: left; }
+
 .row {
   margin: 0 auto;
   width: 100%;
   clear: both;
-  max-height: 100%;
   text-align: center; }
+
+.col-lg-8 {
+  padding: 0 0 0 0; }
+
+.col-lg-4 {
+  padding: 0 0 0 0;
+  height: 100vh; }
 
 .col-lg-12 {
   float: right;
   font-family: fantasy;
-  color: white;
-  max-height: 100%; }
+  padding: 0 0 0 0;
+  padding-left: 10px;
+  text-align: left; }
 
 #opts {
-  background-color: #8cd4ff; }
+  background-color: #8cd4ff;
+  height: 40vh; }
 
 #days {
-  background-color: #003a65; }
+  background-color: #003a65;
+  height: 10vh; }
 
 #allDays {
-  background-color: #8A2BE2; }
+  background-color: #8A2BE2;
+  height: 10vh; }
 
 #currentPlan {
-  background-color: #009085; }
+  background-color: #009085;
+  height: 40vh; }
 
 #map-canvas {
   height: 100vh; }
 
 .navbar {
   background-color: black;
-  color: white; }
+  color: white;
+  margin-bottom: 0px; }
